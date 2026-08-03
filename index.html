@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Almeida & Vasconcelos Advocacia — Direito com clareza. Atendimento com proximidade. Orientação jurídica clara e responsável para pessoas e empresas em São Paulo.">
+  <meta name="keywords" content="advocacia, direito civil, direito de família, direito empresarial, direito imobiliário, direito do trabalho, planejamento sucessório, São Paulo">
+  <meta name="author" content="Almeida & Vasconcelos Advocacia">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://almeidavasconcelos.adv.br/">
+  <meta property="og:title" content="Almeida & Vasconcelos Advocacia | Direito com clareza">
+  <meta property="og:description" content="Orientação jurídica clara e responsável para decisões mais seguras. Atendimento próximo e personalizado em São Paulo.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80">
+
+  <title>Almeida & Vasconcelos Advocacia | Direito com clareza. Atendimento com proximidade.</title>
+
+  <!-- Google Fonts: DM Serif Display & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23102A43'/><text x='50' y='65' font-family='serif' font-size='50' font-weight='bold' fill='%23B79A63' text-anchor='middle'>AV</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Banner Informativo de Portfólio -->
+  <div class="portfolio-disclaimer" id="disclaimer-banner">
+    <div class="container disclaimer-container">
+      <p>
+        <span><strong>PROJETO DEMONSTRATIVO:</strong> Este site foi desenvolvido para fins de portfólio. As informações, profissionais e marcas apresentados são fictícios.</span>
+      </p>
+      <button class="disclaimer-close" id="disclaimer-close-btn" aria-label="Fechar aviso de portfólio">&times;</button>
+    </div>
+  </div>
+
+  <!-- HEADER FIXO -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#inicio" class="brand-logo" aria-label="Página Inicial Almeida & Vasconcelos Advocacia">
+        <span class="brand-name">ALMEIDA & VASCONCELOS</span>
+        <span class="brand-sub">ADVOCACIA</span>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="desktop-nav" aria-label="Navegação Principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">O Escritório</a></li>
+          <li><a href="#areas" class="nav-link">Áreas de Atuação</a></li>
+          <li><a href="#equipe" class="nav-link">Profissionais</a></li>
+          <li><a href="#conteudos" class="nav-link">Conteúdos</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#agendamento-modal" class="btn btn-primary open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
+        
+        <!-- Toggle Menu Mobile -->
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu de navegação">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile Expansível -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+        <li><a href="#sobre" class="mobile-nav-link">O Escritório</a></li>
+        <li><a href="#areas" class="mobile-nav-link">Áreas de Atuação</a></li>
+        <li><a href="#equipe" class="mobile-nav-link">Profissionais</a></li>
+        <li><a href="#conteudos" class="mobile-nav-link">Conteúdos</a></li>
+        <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+      </ul>
+      <div class="mobile-nav-cta">
+        <a href="#agendamento-modal" class="btn btn-primary btn-full open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section" id="inicio">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="eyebrow fade-in">
+            <span class="gold-line"></span>
+            <span>ATUAÇÃO JURÍDICA COM ÉTICA E RESPONSABILIDADE</span>
+          </div>
+          <h1 class="hero-title fade-in">Orientação jurídica clara para decisões mais seguras</h1>
+          <p class="hero-subtitle fade-in">
+            Oferecemos atendimento próximo e análise cuidadosa, considerando as particularidades de cada situação e buscando apresentar caminhos jurídicos de forma clara e responsável.
+          </p>
+          <div class="hero-actions fade-in">
+            <a href="#agendamento-modal" class="btn btn-primary open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
+            <a href="#sobre" class="btn btn-outline">Conhecer o escritório</a>
+          </div>
+          <p class="hero-badge-text fade-in">
+            <i class="fa-solid fa-circle-check gold-icon"></i>
+            Atendimento personalizado para pessoas e empresas.
+          </p>
+        </div>
+        <div class="hero-visual fade-in">
+          <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Ambiente de atendimento e reunião do escritório Almeida & Vasconcelos Advocacia" class="hero-img" loading="eager">
+            <div class="hero-image-card">
+              <div class="gold-accent-badge"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <strong>Compromisso Ético</strong>
+                <span>Comunicação transparente em cada etapa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FAIXA DE CONFIANÇA -->
+    <section class="trust-bar" aria-label="Diferenciais institucionais">
+      <div class="container trust-container">
+        <div class="trust-item">
+          <i class="fa-solid fa-star trust-star"></i>
+          <span>Atendimento individualizado</span>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-star trust-star"></i>
+          <span>Comunicação clara e transparente</span>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-star trust-star"></i>
+          <span>Atuação ética e responsável</span>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-star trust-star"></i>
+          <span>Atenção às particularidades de cada caso</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SOBRE O ESCRITÓRIO -->
+    <section class="about-section section-padding" id="sobre">
+      <div class="container about-container">
+        <div class="about-visual fade-in">
+          <div class="about-image-frame">
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80" alt="Instalações modernas e acolhedoras do escritório Almeida & Vasconcelos em São Paulo" class="about-img" loading="lazy">
+            <div class="about-floating-tag">
+              <i class="fa-solid fa-location-dot gold-icon"></i>
+              <span>Atendimento presencial e on-line</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content fade-in">
+          <div class="eyebrow">
+            <span class="gold-line"></span>
+            <span>O ESCRITÓRIO</span>
+          </div>
+          <h2 class="section-title">Conhecimento jurídico aliado a um atendimento próximo</h2>
+          
+          <div class="about-text-body">
+            <p>
+              No <strong>Almeida & Vasconcelos Advocacia</strong>, entendemos que questões jurídicas podem envolver decisões importantes, dúvidas e diferentes impactos na vida pessoal ou profissional.
+            </p>
+            <p>
+              Por isso, buscamos oferecer um atendimento baseado na escuta, na análise cuidadosa e na comunicação clara. Cada situação é tratada de forma individual, considerando suas particularidades e as informações disponíveis.
+            </p>
+            <p>
+              Nosso trabalho é pautado pela ética, pela responsabilidade e pelo compromisso de apresentar orientações jurídicas de maneira acessível, transparente e tecnicamente fundamentada.
+            </p>
+            <p>
+              Acreditamos que uma boa relação profissional começa com diálogo, confiança e clareza sobre as possibilidades aplicáveis a cada situação.
+            </p>
+          </div>
+
+          <div class="about-actions">
+            <a href="#areas" class="btn btn-primary">Conheça nossa atuação</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ÁREAS DE ATUAÇÃO -->
+    <section class="services-section section-padding bg-light" id="areas">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <div class="eyebrow center-eyebrow">
+            <span class="gold-line"></span>
+            <span>ÁREAS DE ATUAÇÃO</span>
+            <span class="gold-line"></span>
+          </div>
+          <h2 class="section-title">Atuação jurídica para diferentes necessidades</h2>
+          <p class="section-description">
+            Conheça algumas das áreas em que o escritório atua. Cada demanda é analisada de acordo com suas características e com a legislação aplicável.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Area A -->
+          <article class="service-card fade-in">
+            <div class="service-card-header">
+              <span class="service-number">01</span>
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-file-contract fa-lg service-fa-icon"></i>
+              </div>
+            </div>
+            <h3 class="service-title">Direito Civil</h3>
+            <p class="service-text">Orientação e atuação em questões relacionadas a contratos, responsabilidade civil, obrigações, patrimônio e outras relações jurídicas.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20Civil." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito Civil no WhatsApp">
+              <span>Conhecer a área</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Area B -->
+          <article class="service-card fade-in">
+            <div class="service-card-header">
+              <span class="service-number">02</span>
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-users fa-lg service-fa-icon"></i>
+              </div>
+            </div>
+            <h3 class="service-title">Direito de Família e Sucessões</h3>
+            <p class="service-text">Atendimento em questões familiares e patrimoniais, com atenção às particularidades e à sensibilidade de cada situação.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20de%20Fam%C3%ADlia%20e%20Sucess%C3%B5es." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito de Família no WhatsApp">
+              <span>Conhecer a área</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Area C -->
+          <article class="service-card fade-in">
+            <div class="service-card-header">
+              <span class="service-number">03</span>
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-briefcase fa-lg service-fa-icon"></i>
+              </div>
+            </div>
+            <h3 class="service-title">Direito do Trabalho</h3>
+            <p class="service-text">Orientação jurídica para trabalhadores e empresas em questões relacionadas às relações de trabalho.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20do%20Trabalho." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito do Trabalho no WhatsApp">
+              <span>Conhecer a área</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Area D -->
+          <article class="service-card fade-in">
+            <div class="service-card-header">
+              <span class="service-number">04</span>
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-building fa-lg service-fa-icon"></i>
+              </div>
+            </div>
+            <h3 class="service-title">Direito Empresarial</h3>
+            <p class="service-text">Suporte jurídico para empresas, contratos, relações comerciais e demandas relacionadas à atividade empresarial.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20Empresarial." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito Empresarial no WhatsApp">
+              <span>Conhecer a área</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Area E -->
+          <article class="service-card fade-in">
+            <div class="service-card-header">
+              <span class="service-number">05</span>
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-house-chimney fa-lg service-fa-icon"></i>
+              </div>
+            </div>
+            <h3 class="service-title">Direito Imobiliário</h3>
+            <p class="service-text">Orientação em questões relacionadas a imóveis, contratos, locações, compra, venda e relações patrimoniais.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20Imobili%C3%A1rio." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito Imobiliário no WhatsApp">
+              <span>Conhecer a área</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Area F -->
+          <article class="service-card fade-in">
+            <div class="service-card-header">
+              <span class="service-number">06</span>
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-vault fa-lg service-fa-icon"></i>
+              </div>
+            </div>
+            <h3 class="service-title">Planejamento Patrimonial e Sucessório</h3>
+            <p class="service-text">Análise e orientação para organização patrimonial e planejamento sucessório, conforme as necessidades de cada cliente.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Planejamento%20Patrimonial%20e%20Sucess%C3%B3rio." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Planejamento Patrimonial no WhatsApp">
+              <span>Conhecer a área</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DIFERENCIAIS / NOSSA FORMA DE ATUAR -->
+    <section class="differentials-section section-padding">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="eyebrow">
+            <span class="gold-line"></span>
+            <span>NOSSA FORMA DE ATUAR</span>
+          </div>
+          <h2 class="section-title">Rigor técnico, diálogo e atenção aos detalhes</h2>
+        </div>
+
+        <div class="differentials-grid">
+          <!-- Item 01 -->
+          <div class="diff-card fade-in">
+            <span class="diff-num">01</span>
+            <h3 class="diff-title">Atendimento próximo</h3>
+            <p class="diff-text">Valorizamos a escuta e buscamos compreender o contexto de cada pessoa ou empresa.</p>
+          </div>
+
+          <!-- Item 02 -->
+          <div class="diff-card fade-in">
+            <span class="diff-num">02</span>
+            <h3 class="diff-title">Comunicação clara</h3>
+            <p class="diff-text">Apresentamos informações jurídicas de forma objetiva e acessível, respeitando a complexidade de cada tema.</p>
+          </div>
+
+          <!-- Item 03 -->
+          <div class="diff-card fade-in">
+            <span class="diff-num">03</span>
+            <h3 class="diff-title">Análise individualizada</h3>
+            <p class="diff-text">Cada demanda é avaliada conforme suas particularidades, documentos e informações disponíveis.</p>
+          </div>
+
+          <!-- Item 04 -->
+          <div class="diff-card fade-in">
+            <span class="diff-num">04</span>
+            <h3 class="diff-title">Atuação responsável</h3>
+            <p class="diff-text">Nosso trabalho é conduzido com ética, transparência e compromisso profissional.</p>
+          </div>
+
+          <!-- Item 05 -->
+          <div class="diff-card fade-in">
+            <span class="diff-num">05</span>
+            <h3 class="diff-title">Organização e acompanhamento</h3>
+            <p class="diff-text">Buscamos manter uma comunicação organizada sobre as etapas e informações relevantes do atendimento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. COMO FUNCIONA O ATENDIMENTO -->
+    <section class="process-section section-padding bg-navy text-white">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <div class="eyebrow center-eyebrow light-eyebrow">
+            <span class="gold-line"></span>
+            <span>PRIMEIRO CONTATO</span>
+            <span class="gold-line"></span>
+          </div>
+          <h2 class="section-title text-white">Um processo claro desde o início</h2>
+        </div>
+
+        <div class="process-steps">
+          <div class="step-card fade-in">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Entre em contato</h3>
+            <p class="step-text">Envie uma mensagem e informe brevemente o assunto que deseja tratar.</p>
+          </div>
+
+          <div class="step-card fade-in">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Conversa inicial</h3>
+            <p class="step-text">Entendemos o contexto e identificamos as informações necessárias para uma análise inicial.</p>
+          </div>
+
+          <div class="step-card fade-in">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Análise da situação</h3>
+            <p class="step-text">Os documentos e informações relevantes são avaliados conforme a necessidade do atendimento.</p>
+          </div>
+
+          <div class="step-card fade-in">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Orientação e próximos passos</h3>
+            <p class="step-text">Apresentamos as possibilidades aplicáveis e esclarecemos os próximos passos.</p>
+          </div>
+        </div>
+
+        <div class="process-cta text-center fade-in">
+          <a href="#agendamento-modal" class="btn btn-gold open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
+          <p class="process-disclaimer">O contato inicial não representa garantia de contratação ou de resultado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. PROFISSIONAIS / EQUIPE -->
+    <section class="team-section section-padding" id="equipe">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="eyebrow">
+            <span class="gold-line"></span>
+            <span>EQUIPE</span>
+          </div>
+          <h2 class="section-title">Profissionais comprometidos com uma atuação responsável</h2>
+        </div>
+
+        <div class="team-grid">
+          <!-- Profissional 1 -->
+          <article class="team-card fade-in">
+            <div class="team-photo-container">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Retrato profissional da Dra. Marina Almeida" class="team-photo" loading="lazy">
+              <span class="oab-badge">OAB fictícia: 000.000/SP</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dra. Marina Almeida</h3>
+              <p class="team-role">Advogada</p>
+              <p class="team-bio">
+                Atua com foco em Direito Civil, Direito de Família e planejamento patrimonial. Desenvolve seu trabalho com atenção à análise técnica e à comunicação clara.
+              </p>
+            </div>
+          </article>
+
+          <!-- Profissional 2 -->
+          <article class="team-card fade-in">
+            <div class="team-photo-container">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Retrato profissional do Dr. Rafael Vasconcelos" class="team-photo" loading="lazy">
+              <span class="oab-badge">OAB fictícia: 000.001/SP</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Rafael Vasconcelos</h3>
+              <p class="team-role">Advogado</p>
+              <p class="team-bio">
+                Atua nas áreas de Direito Empresarial, Contratos e Direito Imobiliário, com foco em orientação jurídica e atendimento personalizado.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="team-footer text-center fade-in">
+          <a href="#sobre" class="btn btn-outline">Conhecer o escritório</a>
+          <p class="team-disclaimer-note">Profissionais e informações apresentados exclusivamente para demonstração do projeto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTEÚDOS JURÍDICOS -->
+    <section class="articles-section section-padding bg-light" id="conteudos">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <div class="eyebrow center-eyebrow">
+            <span class="gold-line"></span>
+            <span>CONTEÚDOS</span>
+            <span class="gold-line"></span>
+          </div>
+          <h2 class="section-title">Informação jurídica de forma clara</h2>
+          <p class="section-description">
+            Conteúdos informativos para ajudar na compreensão de temas jurídicos do cotidiano.
+          </p>
+        </div>
+
+        <div class="articles-grid">
+          <!-- Artigo 1 -->
+          <article class="article-card fade-in">
+            <div class="article-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80" alt="Análise cuidadosa de documentos e contratos jurídicos" class="article-img" loading="lazy">
+              <span class="article-tag">Direito Civil</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Contrato: por que revisar as cláusulas antes de assinar?</h3>
+              <p class="article-summary">
+                Entenda a importância de analisar obrigações, prazos e condições antes da formalização.
+              </p>
+              <button class="btn-text read-article-btn" data-article="article-1">
+                <span>Ler conteúdo</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Artigo 2 -->
+          <article class="article-card fade-in">
+            <div class="article-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Planejamento e organização patrimonial em família" class="article-img" loading="lazy">
+              <span class="article-tag">Família e Sucessões</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Planejamento sucessório: quando considerar?</h3>
+              <p class="article-summary">
+                Conheça alguns pontos que podem ser avaliados na organização patrimonial e sucessória.
+              </p>
+              <button class="btn-text read-article-btn" data-article="article-2">
+                <span>Ler conteúdo</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Artigo 3 -->
+          <article class="article-card fade-in">
+            <div class="article-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80" alt="Reunião sobre relações de trabalho e ambiente corporativo" class="article-img" loading="lazy">
+              <span class="article-tag">Direito do Trabalho</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Direitos e deveres nas relações de trabalho</h3>
+              <p class="article-summary">
+                Uma visão geral sobre a importância de compreender responsabilidades e obrigações.
+              </p>
+              <button class="btn-text read-article-btn" data-article="article-3">
+                <span>Ler conteúdo</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="articles-footer text-center fade-in">
+          <p class="articles-disclaimer-note">Conteúdos demonstrativos e informativos. Não substituem orientação jurídica individualizada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CTA PRINCIPAL -->
+    <section class="main-cta-section section-padding bg-navy text-white text-center">
+      <div class="container cta-container fade-in">
+        <div class="cta-gold-accent"><i class="fa-solid fa-star"></i></div>
+        <h2 class="cta-title text-white">Precisa de orientação jurídica?</h2>
+        <p class="cta-text">
+          Entre em contato para apresentar sua situação e conhecer as possibilidades de atendimento.
+        </p>
+        <div class="cta-actions">
+          <a href="#agendamento-modal" class="btn btn-gold open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
+        </div>
+        <p class="cta-small-note">Cada situação é analisada de forma individual e responsável.</p>
+      </div>
+    </section>
+
+    <!-- 11. FAQ ACCORDION -->
+    <section class="faq-section section-padding" id="faq">
+      <div class="container faq-container">
+        <div class="section-header text-center fade-in">
+          <div class="eyebrow center-eyebrow">
+            <span class="gold-line"></span>
+            <span>DÚVIDAS FREQUENTES</span>
+            <span class="gold-line"></span>
+          </div>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <p class="section-description">Esclareça suas dúvidas sobre a dinâmica de atendimento do escritório.</p>
+        </div>
+
+        <div class="accordion-wrapper fade-in">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-1" id="faq-req-1">
+              <span>Como posso entrar em contato com o escritório?</span>
+              <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
+            </button>
+            <div class="accordion-content" id="faq-ans-1" aria-labelledby="faq-req-1" hidden>
+              <div class="accordion-inner">
+                <p>Você pode entrar em contato pelo WhatsApp oficial do escritório, por e-mail ou preenchendo o formulário de contato no site. A equipe orientará sobre as informações necessárias para o atendimento inicial.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-2" id="faq-req-2">
+              <span>O atendimento pode ser realizado on-line?</span>
+              <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
+            </button>
+            <div class="accordion-content" id="faq-ans-2" aria-labelledby="faq-req-2" hidden>
+              <div class="accordion-inner">
+                <p>Sim. Oferecemos atendimento presencial em nosso escritório em São Paulo e atendimento on-line via videochamada para clientes de outras regiões ou que prefiram maior praticidade.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-3" id="faq-req-3">
+              <span>Preciso enviar documentos no primeiro contato?</span>
+              <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
+            </button>
+            <div class="accordion-content" id="faq-ans-3" aria-labelledby="faq-req-3" hidden>
+              <div class="accordion-inner">
+                <p>No primeiro contato, basta relatar brevemente o contexto da sua necessidade. Caso seja necessário analisar documentos específicos para a conversa inicial, nossa equipe informará com antecedência.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-4" id="faq-req-4">
+              <span>Como funciona a análise inicial?</span>
+              <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
+            </button>
+            <div class="accordion-content" id="faq-ans-4" aria-labelledby="faq-req-4" hidden>
+              <div class="accordion-inner">
+                <p>Na análise inicial, ouvimos o seu relato, compreendemos o cenário e identificamos as possibilidades aplicáveis de acordo com a legislação vigente, orientando sobre os caminhos cabíveis.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-5" id="faq-req-5">
+              <span>O escritório atende pessoas físicas e empresas?</span>
+              <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
+            </button>
+            <div class="accordion-content" id="faq-ans-5" aria-labelledby="faq-req-5" hidden>
+              <div class="accordion-inner">
+                <p>Sim. Atendemos demandas de pessoas físicas (como questões cíveis, familiares ou de planejamento patrimonial) e de pessoas jurídicas (contratos, suporte empresarial e relações trabalhistas).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-6" id="faq-req-6">
+              <span>O atendimento é realizado apenas na cidade?</span>
+              <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
+            </button>
+            <div class="accordion-content" id="faq-ans-6" aria-labelledby="faq-req-6" hidden>
+              <div class="accordion-inner">
+                <p>Embora nossa sede presencial esteja localizada na Avenida Paulista em São Paulo/SP, atendemos demandas em âmbito nacional através do atendimento digital e acompanhamento remoto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. CONTATO & LOCALIZAÇÃO -->
+    <section class="contact-section section-padding bg-light" id="contato">
+      <div class="container contact-container">
+        <div class="contact-info-block fade-in">
+          <div class="eyebrow">
+            <span class="gold-line"></span>
+            <span>CONTATO</span>
+          </div>
+          <h2 class="section-title">Fale com nossa equipe</h2>
+          <p class="contact-lead">
+            Entre em contato para apresentar brevemente sua necessidade e receber orientações sobre o atendimento.
+          </p>
+
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <i class="fa-solid fa-location-dot contact-fa-icon"></i>
+              </div>
+              <div>
+                <strong>Endereço Institucional</strong>
+                <p>Almeida & Vasconcelos Advocacia<br>Avenida Paulista, 1000 — Bela Vista<br>São Paulo — SP | CEP 01310-100</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <i class="fa-solid fa-clock contact-fa-icon"></i>
+              </div>
+              <div>
+                <strong>Horário de Atendimento</strong>
+                <p>Segunda a sexta-feira: 09h às 18h<br><em>Atendimento mediante agendamento.</em></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <i class="fa-solid fa-headset contact-fa-icon"></i>
+              </div>
+              <div>
+                <strong>Telefone & E-mail</strong>
+                <p>Telefone: (11) 99999-9999<br>E-mail: contato@almeidavasconcelos.adv.br</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-quick-cta">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp fa-lg"></i>
+              <span>Falar pelo WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-block fade-in">
+          <div class="form-card">
+            <h3 class="form-card-title">Enviar uma Mensagem</h3>
+            <p class="form-card-subtitle">Preencha o formulário para agendar uma conversa inicial.</p>
+
+            <form id="institutional-contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name">Nome Completo *</label>
+                <input type="text" id="form-name" name="name" required placeholder="Digite seu nome">
+                <span class="field-error" id="error-name"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email">E-mail de Contato *</label>
+                <input type="email" id="form-email" name="email" required placeholder="seuemail@exemplo.com">
+                <span class="field-error" id="error-email"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-phone">Telefone / WhatsApp *</label>
+                <input type="tel" id="form-phone" name="phone" required placeholder="(11) 99999-9999">
+                <span class="field-error" id="error-phone"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-area">Área de Interesse</label>
+                <select id="form-area" name="area">
+                  <option value="Geral">Selecione a área (opcional)</option>
+                  <option value="Direito Civil">Direito Civil</option>
+                  <option value="Direito de Família e Sucessões">Direito de Família e Sucessões</option>
+                  <option value="Direito do Trabalho">Direito do Trabalho</option>
+                  <option value="Direito Empresarial">Direito Empresarial</option>
+                  <option value="Direito Imobiliário">Direito Imobiliário</option>
+                  <option value="Planejamento Patrimonial e Sucessório">Planejamento Patrimonial e Sucessório</option>
+                  <option value="Outra demanda">Outra demanda</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Resumo da Situação *</label>
+                <textarea id="form-message" name="message" rows="4" required placeholder="Descreva brevemente o assunto que deseja tratar"></textarea>
+                <span class="field-error" id="error-message"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">Solicitar agendamento</button>
+              
+              <p class="form-disclaimer-text">
+                Seus dados serão utilizados apenas para retorno do contato. O envio deste formulário não constitui compromisso contratual.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapa Demonstrativo Estilizado -->
+      <div class="container map-wrapper fade-in">
+        <div class="styled-map-card">
+          <div class="map-overlay">
+            <i class="fa-solid fa-location-dot map-fa-icon"></i>
+            <div>
+              <strong>Almeida & Vasconcelos Advocacia</strong>
+              <span>Avenida Paulista, 1000 — Bela Vista, São Paulo / SP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 13. FOOTER -->
+  <footer class="site-footer bg-navy text-white">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#inicio" class="footer-logo">
+            <span class="brand-name text-white">ALMEIDA & VASCONCELOS</span>
+            <span class="brand-sub gold-text">ADVOCACIA</span>
+          </a>
+          <p class="footer-slogan">“Direito com clareza. Atendimento com proximidade.”</p>
+        </div>
+
+        <div class="footer-nav">
+          <h4 class="footer-heading">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">O Escritório</a></li>
+            <li><a href="#areas">Áreas de Atuação</a></li>
+            <li><a href="#equipe">Profissionais</a></li>
+            <li><a href="#conteudos">Conteúdos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-heading">Contato & Localização</h4>
+          <p>Av. Paulista, 1000 — São Paulo/SP</p>
+          <p>contato@almeidavasconcelos.adv.br</p>
+          <p>(11) 99999-9999</p>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Almeida & Vasconcelos Advocacia. Todos os direitos reservados.</p>
+        
+        <div class="portfolio-legal-notice">
+          <p><strong>Aviso importante:</strong> Projeto demonstrativo criado exclusivamente para apresentação de portfólio. Escritório, profissionais, informações e conteúdos são fictícios.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 14. BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Entrar em contato pelo WhatsApp">
+    <span class="whatsapp-tooltip">Agendar uma conversa</span>
+    <i class="fa-brands fa-whatsapp fa-2xl" aria-hidden="true"></i>
+  </a>
+
+  <!-- MODAL DE AGENDAMENTO DE CONVERSA INICIAL -->
+  <div class="modal-overlay" id="modal-agendamento" aria-hidden="true" role="dialog" aria-labelledby="modal-agendamento-title">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Fechar janela modal">&times;</button>
+      <div class="modal-header">
+        <span class="gold-accent-badge"><i class="fa-solid fa-star"></i></span>
+        <h3 id="modal-agendamento-title" class="modal-title">Agendar uma conversa inicial</h3>
+        <p class="modal-subtitle">Escolha a melhor forma para entrar em contato com a equipe de Almeida & Vasconcelos.</p>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-options">
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20conversa%20inicial%20com%20o%20escrit%C3%B3rio." target="_blank" rel="noopener noreferrer" class="modal-option-card">
+            <div class="modal-option-icon whatsapp-bg">
+              <i class="fa-brands fa-whatsapp fa-xl text-white"></i>
+            </div>
+            <div>
+              <strong>Conversar via WhatsApp</strong>
+              <span>Atendimento rápido via aplicativo</span>
+            </div>
+          </a>
+
+          <a href="#contato" class="modal-option-card modal-trigger-close">
+            <div class="modal-option-icon navy-bg">
+              <i class="fa-solid fa-envelope fa-lg text-white"></i>
+            </div>
+            <div>
+              <strong>Preencher formulário no site</strong>
+              <span>Envie mensagem com detalhes do caso</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>O contato inicial não representa garantia de contratação ou de resultado.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE LEITURA DE ARTIGOS -->
+  <div class="modal-overlay" id="modal-artigo" aria-hidden="true" role="dialog" aria-labelledby="modal-artigo-title">
+    <div class="modal-card modal-card-large">
+      <button class="modal-close-btn" aria-label="Fechar artigo">&times;</button>
+      <div class="modal-article-header">
+        <span class="article-tag" id="modal-artigo-tag">Direito Civil</span>
+        <h2 id="modal-artigo-title" class="modal-article-title">Título do Artigo Jurídico</h2>
+        <p class="modal-article-meta">Por Equipe Almeida & Vasconcelos Advocacia • Artigo Informativo</p>
+      </div>
+      <div class="modal-article-body" id="modal-artigo-content">
+        <!-- Conteúdo dinâmico populado via script.js -->
+      </div>
+      <div class="modal-footer text-center">
+        <p class="articles-disclaimer-note">Conteúdo demonstrativo e informativo. Não substitui orientação jurídica individualizada.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST DE NOTIFICAÇÃO -->
+  <div class="toast-notification" id="toast-message" role="alert" aria-live="assertive">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span class="toast-text">Sua mensagem foi enviada com sucesso!</span>
+  </div>
+
+  <!-- Script Principal -->
+  <script src="script.js"></script>
+</body>
+</html>
