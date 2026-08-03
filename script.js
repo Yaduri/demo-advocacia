@@ -4,21 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  
-  /* ==========================================================================
-     1. BANNER INFORMATIVO DE PORTFÓLIO
-     ========================================================================== */
-  const disclaimerBanner = document.getElementById('disclaimer-banner');
-  const disclaimerCloseBtn = document.getElementById('disclaimer-close-btn');
-
-  if (disclaimerCloseBtn && disclaimerBanner) {
-    disclaimerCloseBtn.addEventListener('click', () => {
-      disclaimerBanner.style.display = 'none';
-    });
-  }
 
   /* ==========================================================================
-     2. SITE HEADER & MOBILE MENU
+     1. SITE HEADER & MOBILE MENU
      ========================================================================== */
   const siteHeader = document.getElementById('site-header');
   const mobileToggle = document.getElementById('mobile-toggle');
@@ -76,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     3. SMOOTH SCROLL & ACTIVE NAV LINK HIGHLIGHT
+     2. SMOOTH SCROLL & ACTIVE NAV LINK HIGHLIGHT
      ========================================================================== */
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id], header[id]');
@@ -101,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     4. FAQ ACCORDION
+     3. FAQ ACCORDION
      ========================================================================== */
   const accordionHeaders = document.querySelectorAll('.accordion-header');
 
@@ -135,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     5. SISTEMA DE MODAIS (AGENDAMENTO E LEITURA DE ARTIGOS)
+     4. SISTEMA DE MODAIS (AGENDAMENTO E LEITURA DE ARTIGOS)
      ========================================================================== */
   const openModalBtns = document.querySelectorAll('.open-modal-btn');
   const closeModalBtns = document.querySelectorAll('.modal-close-btn');
@@ -268,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     6. VALIDAÇÃO DO FORMULÁRIO DE CONTATO INSTITUCIONAL
+     5. VALIDAÇÃO DO FORMULÁRIO DE CONTATO INSTITUCIONAL
      ========================================================================== */
   const contactForm = document.getElementById('institutional-contact-form');
   const toastMessage = document.getElementById('toast-message');
@@ -332,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     7. ANIMAÇÕES FADE-IN COM INTERSECTION OBSERVER
+     6. ANIMAÇÕES FADE-IN COM INTERSECTION OBSERVER
      ========================================================================== */
   const fadeElements = document.querySelectorAll('.fade-in');
 
