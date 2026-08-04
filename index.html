@@ -20,20 +20,20 @@
   <!-- Google Fonts: DM Serif Display & Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome 6 Free CDN -->
+  <!-- Font Awesome 6 Free CDN (Toda a Iconografia do Site) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23102A43'/><text x='50' y='65' font-family='serif' font-size='50' font-weight='bold' fill='%23B79A63' text-anchor='middle'>AV</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230C1624'/><text x='50' y='65' font-family='serif' font-size='50' font-weight='bold' fill='%23C5A880' text-anchor='middle'>AV</text></svg>">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-dark-editorial">
 
-  <!-- HEADER FIXO -->
+  <!-- HEADER FIXO NOVO LAYOUT -->
   <header class="site-header" id="site-header">
     <div class="container header-container">
       <a href="#inicio" class="brand-logo" aria-label="Página Inicial Almeida & Vasconcelos Advocacia">
@@ -54,7 +54,7 @@
       </nav>
 
       <div class="header-actions">
-        <a href="#agendamento-modal" class="btn btn-primary open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
+        <a href="#agendamento-modal" class="btn btn-gold-fill open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
         
         <!-- Toggle Menu Mobile -->
         <button class="mobile-menu-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu de navegação">
@@ -76,282 +76,357 @@
         <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
       </ul>
       <div class="mobile-nav-cta">
-        <a href="#agendamento-modal" class="btn btn-primary btn-full open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
+        <a href="#agendamento-modal" class="btn btn-gold-fill btn-full open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
       </div>
     </div>
   </header>
 
   <main id="main-content">
     
-    <!-- 2. HERO SECTION -->
-    <section class="hero-section" id="inicio">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="eyebrow fade-in">
-            <span class="gold-line"></span>
-            <span>ATUAÇÃO JURÍDICA COM ÉTICA E RESPONSABILIDADE</span>
-          </div>
-          <h1 class="hero-title fade-in">Orientação jurídica clara para decisões mais seguras</h1>
-          <p class="hero-subtitle fade-in">
-            Oferecemos atendimento próximo e análise cuidadosa, considerando as particularidades de cada situação e buscando apresentar caminhos jurídicos de forma clara e responsável.
-          </p>
-          <div class="hero-actions fade-in">
-            <a href="#agendamento-modal" class="btn btn-primary open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
-            <a href="#sobre" class="btn btn-outline">Conhecer o escritório</a>
-          </div>
-          <p class="hero-badge-text fade-in">
-            <i class="fa-solid fa-circle-check gold-icon"></i>
-            Atendimento personalizado para pessoas e empresas.
-          </p>
+    <!-- 2. HERO EDITORIAL CENTRALIZADO COM BANNER ARQUITETÔNICO COMPACTO -->
+    <section class="hero-editorial-section" id="inicio">
+      <div class="container hero-editorial-container text-center">
+        
+        <!-- Pillar Badge Top -->
+        <div class="eyebrow center-eyebrow fade-in">
+          <span class="gold-badge-pill">
+            <i class="fa-solid fa-scale-balanced gold-icon"></i>
+            ATUAÇÃO JURÍDICA COM ÉTICA E RESPONSABILIDADE
+          </span>
         </div>
-        <div class="hero-visual fade-in">
-          <div class="hero-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Ambiente de atendimento e reunião do escritório Almeida & Vasconcelos Advocacia" class="hero-img" loading="eager">
-            <div class="hero-image-card">
-              <div class="gold-accent-badge"><i class="fa-solid fa-shield-halved"></i></div>
+
+        <!-- Main Title Centered -->
+        <h1 class="hero-editorial-title fade-in">
+          Orientação jurídica clara para decisões mais seguras
+        </h1>
+
+        <!-- Subtitle Centered -->
+        <p class="hero-editorial-subtitle fade-in">
+          Oferecemos atendimento próximo e análise cuidadosa, considerando as particularidades de cada situação e buscando apresentar caminhos jurídicos de forma clara e responsável.
+        </p>
+
+        <!-- Actions Centered -->
+        <div class="hero-editorial-actions fade-in">
+          <a href="#agendamento-modal" class="btn btn-gold-fill open-modal-btn" data-modal="modal-agendamento">
+            <span>Agendar uma conversa</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#sobre" class="btn btn-dark-outline">
+            <span>Conhecer o escritório</span>
+          </a>
+        </div>
+
+        <p class="hero-badge-tag fade-in">
+          <i class="fa-solid fa-circle-check gold-icon"></i>
+          Atendimento personalizado para pessoas e empresas.
+        </p>
+
+        <!-- Banner Arquitetônico Panorama com Overlay de Estatísticas -->
+        <div class="hero-banner-wrapper fade-in">
+          <div class="hero-banner-image-container">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80" alt="Instalações corporativas modernas de Almeida & Vasconcelos Advocacia" class="hero-banner-img" loading="eager">
+            <div class="hero-banner-overlay"></div>
+          </div>
+
+          <!-- Faixa Flutuante de Pilares Embutida no Banner -->
+          <div class="hero-banner-floating-strip">
+            <div class="strip-card">
+              <i class="fa-solid fa-user-shield strip-icon"></i>
               <div>
-                <strong>Compromisso Ético</strong>
-                <span>Comunicação transparente em cada etapa</span>
+                <strong>Atendimento Próximo</strong>
+                <span>Escuta ativa e acompanhamento individual</span>
+              </div>
+            </div>
+            <div class="strip-divider"></div>
+            <div class="strip-card">
+              <i class="fa-solid fa-file-signature strip-icon"></i>
+              <div>
+                <strong>Comunicação Clara</strong>
+                <span>Linguagem acessível e tecnicamente segura</span>
+              </div>
+            </div>
+            <div class="strip-divider"></div>
+            <div class="strip-card">
+              <i class="fa-solid fa-gavel strip-icon"></i>
+              <div>
+                <strong>Rigor Técnico</strong>
+                <span>Análise responsável de cada particularidade</span>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- 3. FAIXA DE CONFIANÇA -->
-    <section class="trust-bar" aria-label="Diferenciais institucionais">
-      <div class="container trust-container">
-        <div class="trust-item">
-          <i class="fa-solid fa-star trust-star"></i>
-          <span>Atendimento individualizado</span>
-        </div>
-        <div class="trust-item">
-          <i class="fa-solid fa-star trust-star"></i>
-          <span>Comunicação clara e transparente</span>
-        </div>
-        <div class="trust-item">
-          <i class="fa-solid fa-star trust-star"></i>
-          <span>Atuação ética e responsável</span>
-        </div>
-        <div class="trust-item">
-          <i class="fa-solid fa-star trust-star"></i>
-          <span>Atenção às particularidades de cada caso</span>
+    <!-- 3. FAIXA DE CONFIANÇA INSTITUCIONAL (DESIGN COMPACTO HORIZONTAL) -->
+    <section class="trust-strip-section" aria-label="Diferenciais institucionais">
+      <div class="container">
+        <div class="trust-strip-grid">
+          <div class="trust-strip-item">
+            <i class="fa-solid fa-star trust-star"></i>
+            <span>Atendimento individualizado</span>
+          </div>
+          <div class="trust-strip-item">
+            <i class="fa-solid fa-star trust-star"></i>
+            <span>Comunicação clara e transparente</span>
+          </div>
+          <div class="trust-strip-item">
+            <i class="fa-solid fa-star trust-star"></i>
+            <span>Atuação ética e responsável</span>
+          </div>
+          <div class="trust-strip-item">
+            <i class="fa-solid fa-star trust-star"></i>
+            <span>Atenção às particularidades de cada caso</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. SOBRE O ESCRITÓRIO -->
-    <section class="about-section section-padding" id="sobre">
-      <div class="container about-container">
-        <div class="about-visual fade-in">
-          <div class="about-image-frame">
-            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80" alt="Instalações modernas e acolhedoras do escritório Almeida & Vasconcelos em São Paulo" class="about-img" loading="lazy">
-            <div class="about-floating-tag">
+    <!-- 4. SOBRE O ESCRITÓRIO (LAYOUT ASSIMÉTRICO 3 BLOCOS) -->
+    <section class="about-section section-padding bg-cream" id="sobre">
+      <div class="container">
+        <div class="about-editorial-grid">
+          
+          <!-- Card 1: Bloco de Manifesto Institucional (Navy Card) -->
+          <div class="about-manifesto-card fade-in">
+            <div class="manifesto-badge">
+              <i class="fa-solid fa-building-columns gold-icon"></i>
+              <span>NOSSO COMPROMISSO</span>
+            </div>
+            <h3 class="manifesto-quote">
+              “Acreditamos que uma boa relação profissional começa com diálogo, confiança e clareza.”
+            </h3>
+            <p class="manifesto-sub">
+              Tradição, ética e transparência fundamentam a nossa atuação jurídica diária em São Paulo.
+            </p>
+            <div class="manifesto-tag">
               <i class="fa-solid fa-location-dot gold-icon"></i>
               <span>Atendimento presencial e on-line</span>
             </div>
           </div>
-        </div>
-        <div class="about-content fade-in">
-          <div class="eyebrow">
-            <span class="gold-line"></span>
-            <span>O ESCRITÓRIO</span>
-          </div>
-          <h2 class="section-title">Conhecimento jurídico aliado a um atendimento próximo</h2>
-          
-          <div class="about-text-body">
-            <p>
-              No <strong>Almeida & Vasconcelos Advocacia</strong>, entendemos que questões jurídicas podem envolver decisões importantes, dúvidas e diferentes impactos na vida pessoal ou profissional.
-            </p>
-            <p>
-              Por isso, buscamos oferecer um atendimento baseado na escuta, na análise cuidadosa e na comunicação clara. Cada situação é tratada de forma individual, considerando suas particularidades e as informações disponíveis.
-            </p>
-            <p>
-              Nosso trabalho é pautado pela ética, pela responsabilidade e pelo compromisso de apresentar orientações jurídicas de maneira acessível, transparente e tecnicamente fundamentada.
-            </p>
-            <p>
-              Acreditamos que uma boa relação profissional começa com diálogo, confiança e clareza sobre as possibilidades aplicáveis a cada situação.
-            </p>
+
+          <!-- Card 2: Foto Arquitetônica -->
+          <div class="about-photo-card fade-in">
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80" alt="Salas de atendimento privativas do escritório Almeida & Vasconcelos" class="about-photo-img" loading="lazy">
           </div>
 
-          <div class="about-actions">
-            <a href="#areas" class="btn btn-primary">Conheça nossa atuação</a>
+          <!-- Card 3: Texto de História & Atuação -->
+          <div class="about-text-card fade-in">
+            <div class="eyebrow">
+              <span class="gold-line"></span>
+              <span>O ESCRITÓRIO</span>
+            </div>
+            <h2 class="section-title text-navy">Conhecimento jurídico aliado a um atendimento próximo</h2>
+            
+            <div class="about-paragraphs">
+              <p>
+                No <strong>Almeida & Vasconcelos Advocacia</strong>, entendemos que questões jurídicas podem envolver decisões importantes, dúvidas e diferentes impactos na vida pessoal ou profissional.
+              </p>
+              <p>
+                Por isso, buscamos oferecer um atendimento baseado na escuta, na análise cuidadosa e na comunicação clara. Cada situação é tratada de forma individual, considerando suas particularidades e as informações disponíveis.
+              </p>
+              <p>
+                Nosso trabalho é pautado pela ética, pela responsabilidade e pelo compromisso de apresentar orientações jurídicas de maneira acessível, transparente e tecnicamente fundamentada.
+              </p>
+            </div>
+
+            <div class="about-actions-wrapper">
+              <a href="#areas" class="btn btn-navy-fill">Conheça nossa atuação</a>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 5. ÁREAS DE ATUAÇÃO -->
-    <section class="services-section section-padding bg-light" id="areas">
+    <!-- 5. ÁREAS DE ATUAÇÃO (LAYOUT MATRIX DE CARTÕES DARK ELEGANTES) -->
+    <section class="services-matrix-section section-padding bg-dark-editorial" id="areas">
       <div class="container">
+        
         <div class="section-header text-center fade-in">
           <div class="eyebrow center-eyebrow">
             <span class="gold-line"></span>
             <span>ÁREAS DE ATUAÇÃO</span>
             <span class="gold-line"></span>
           </div>
-          <h2 class="section-title">Atuação jurídica para diferentes necessidades</h2>
+          <h2 class="section-title text-white">Atuação jurídica para diferentes necessidades</h2>
           <p class="section-description">
             Conheça algumas das áreas em que o escritório atua. Cada demanda é analisada de acordo com suas características e com a legislação aplicável.
           </p>
         </div>
 
-        <div class="services-grid">
-          <!-- Area A -->
-          <article class="service-card fade-in">
-            <div class="service-card-header">
-              <span class="service-number">01</span>
-              <div class="service-icon-wrapper">
-                <i class="fa-solid fa-file-contract fa-lg service-fa-icon"></i>
+        <div class="services-matrix-grid">
+          
+          <!-- Area 01 -->
+          <article class="service-matrix-card fade-in">
+            <div class="card-top-bar">
+              <span class="card-index">01</span>
+              <div class="service-fa-box">
+                <i class="fa-solid fa-file-contract"></i>
               </div>
             </div>
-            <h3 class="service-title">Direito Civil</h3>
-            <p class="service-text">Orientação e atuação em questões relacionadas a contratos, responsabilidade civil, obrigações, patrimônio e outras relações jurídicas.</p>
-            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20Civil." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito Civil no WhatsApp">
+            <h3 class="service-title-text">Direito Civil</h3>
+            <p class="service-body-text">Orientação e atuação em questões relacionadas a contratos, responsabilidade civil, obrigações, patrimônio e outras relações jurídicas.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20Civil." target="_blank" rel="noopener noreferrer" class="service-action-link" aria-label="Conhecer área de Direito Civil via WhatsApp">
               <span>Conhecer a área</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </article>
 
-          <!-- Area B -->
-          <article class="service-card fade-in">
-            <div class="service-card-header">
-              <span class="service-number">02</span>
-              <div class="service-icon-wrapper">
-                <i class="fa-solid fa-users fa-lg service-fa-icon"></i>
+          <!-- Area 02 -->
+          <article class="service-matrix-card fade-in">
+            <div class="card-top-bar">
+              <span class="card-index">02</span>
+              <div class="service-fa-box">
+                <i class="fa-solid fa-users"></i>
               </div>
             </div>
-            <h3 class="service-title">Direito de Família e Sucessões</h3>
-            <p class="service-text">Atendimento em questões familiares e patrimoniais, com atenção às particularidades e à sensibilidade de cada situação.</p>
-            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20de%20Fam%C3%ADlia%20e%20Sucess%C3%B5es." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito de Família no WhatsApp">
+            <h3 class="service-title-text">Direito de Família e Sucessões</h3>
+            <p class="service-body-text">Atendimento em questões familiares e patrimoniais, com atenção às particularidades e à sensibilidade de cada situação.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20de%20Fam%C3%ADlia%20e%20Sucess%C3%B5es." target="_blank" rel="noopener noreferrer" class="service-action-link" aria-label="Conhecer área de Direito de Família via WhatsApp">
               <span>Conhecer a área</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </article>
 
-          <!-- Area C -->
-          <article class="service-card fade-in">
-            <div class="service-card-header">
-              <span class="service-number">03</span>
-              <div class="service-icon-wrapper">
-                <i class="fa-solid fa-briefcase fa-lg service-fa-icon"></i>
+          <!-- Area 03 -->
+          <article class="service-matrix-card fade-in">
+            <div class="card-top-bar">
+              <span class="card-index">03</span>
+              <div class="service-fa-box">
+                <i class="fa-solid fa-briefcase"></i>
               </div>
             </div>
-            <h3 class="service-title">Direito do Trabalho</h3>
-            <p class="service-text">Orientação jurídica para trabalhadores e empresas em questões relacionadas às relações de trabalho.</p>
-            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20do%20Trabalho." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito do Trabalho no WhatsApp">
+            <h3 class="service-title-text">Direito do Trabalho</h3>
+            <p class="service-body-text">Orientação jurídica para trabalhadores e empresas em questões relacionadas às relações de trabalho.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20do%20Trabalho." target="_blank" rel="noopener noreferrer" class="service-action-link" aria-label="Conhecer área de Direito do Trabalho via WhatsApp">
               <span>Conhecer a área</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </article>
 
-          <!-- Area D -->
-          <article class="service-card fade-in">
-            <div class="service-card-header">
-              <span class="service-number">04</span>
-              <div class="service-icon-wrapper">
-                <i class="fa-solid fa-building fa-lg service-fa-icon"></i>
+          <!-- Area 04 -->
+          <article class="service-matrix-card fade-in">
+            <div class="card-top-bar">
+              <span class="card-index">04</span>
+              <div class="service-fa-box">
+                <i class="fa-solid fa-building"></i>
               </div>
             </div>
-            <h3 class="service-title">Direito Empresarial</h3>
-            <p class="service-text">Suporte jurídico para empresas, contratos, relações comerciais e demandas relacionadas à atividade empresarial.</p>
-            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20Empresarial." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito Empresarial no WhatsApp">
+            <h3 class="service-title-text">Direito Empresarial</h3>
+            <p class="service-body-text">Suporte jurídico para empresas, contratos, relações comerciais e demandas relacionadas à atividade empresarial.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20Empresarial." target="_blank" rel="noopener noreferrer" class="service-action-link" aria-label="Conhecer área de Direito Empresarial via WhatsApp">
               <span>Conhecer a área</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </article>
 
-          <!-- Area E -->
-          <article class="service-card fade-in">
-            <div class="service-card-header">
-              <span class="service-number">05</span>
-              <div class="service-icon-wrapper">
-                <i class="fa-solid fa-house-chimney fa-lg service-fa-icon"></i>
+          <!-- Area 05 -->
+          <article class="service-matrix-card fade-in">
+            <div class="card-top-bar">
+              <span class="card-index">05</span>
+              <div class="service-fa-box">
+                <i class="fa-solid fa-house-chimney"></i>
               </div>
             </div>
-            <h3 class="service-title">Direito Imobiliário</h3>
-            <p class="service-text">Orientação em questões relacionadas a imóveis, contratos, locações, compra, venda e relações patrimoniais.</p>
-            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20Imobili%C3%A1rio." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Direito Imobiliário no WhatsApp">
+            <h3 class="service-title-text">Direito Imobiliário</h3>
+            <p class="service-body-text">Orientação em questões relacionadas a imóveis, contratos, locações, compra, venda e relações patrimoniais.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Direito%20Imobili%C3%A1rio." target="_blank" rel="noopener noreferrer" class="service-action-link" aria-label="Conhecer área de Direito Imobiliário via WhatsApp">
               <span>Conhecer a área</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </article>
 
-          <!-- Area F -->
-          <article class="service-card fade-in">
-            <div class="service-card-header">
-              <span class="service-number">06</span>
-              <div class="service-icon-wrapper">
-                <i class="fa-solid fa-vault fa-lg service-fa-icon"></i>
+          <!-- Area 06 -->
+          <article class="service-matrix-card fade-in">
+            <div class="card-top-bar">
+              <span class="card-index">06</span>
+              <div class="service-fa-box">
+                <i class="fa-solid fa-vault"></i>
               </div>
             </div>
-            <h3 class="service-title">Planejamento Patrimonial e Sucessório</h3>
-            <p class="service-text">Análise e orientação para organização patrimonial e planejamento sucessório, conforme as necessidades de cada cliente.</p>
-            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Planejamento%20Patrimonial%20e%20Sucess%C3%B3rio." target="_blank" rel="noopener noreferrer" class="service-link" aria-label="Conhecer área de Planejamento Patrimonial no WhatsApp">
+            <h3 class="service-title-text">Planejamento Patrimonial e Sucessório</h3>
+            <p class="service-body-text">Análise e orientação para organização patrimonial e planejamento sucessório, conforme as necessidades de cada cliente.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20escrit%C3%B3rio%20pelo%20site%20e%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20na%20%C3%A1rea%20de%20Planejamento%20Patrimonial%20e%20Sucess%C3%B3rio." target="_blank" rel="noopener noreferrer" class="service-action-link" aria-label="Conhecer área de Planejamento Patrimonial via WhatsApp">
               <span>Conhecer a área</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- 6. DIFERENCIAIS / NOSSA FORMA DE ATUAR -->
-    <section class="differentials-section section-padding">
+    <!-- 6. DIFERENCIAIS (NOSSOS PILARES - GRID MODERNO) -->
+    <section class="pilars-section section-padding bg-cream">
       <div class="container">
+        
         <div class="section-header fade-in">
           <div class="eyebrow">
             <span class="gold-line"></span>
             <span>NOSSA FORMA DE ATUAR</span>
           </div>
-          <h2 class="section-title">Rigor técnico, diálogo e atenção aos detalhes</h2>
+          <h2 class="section-title text-navy">Rigor técnico, diálogo e atenção aos detalhes</h2>
         </div>
 
-        <div class="differentials-grid">
-          <!-- Item 01 -->
-          <div class="diff-card fade-in">
-            <span class="diff-num">01</span>
-            <h3 class="diff-title">Atendimento próximo</h3>
-            <p class="diff-text">Valorizamos a escuta e buscamos compreender o contexto de cada pessoa ou empresa.</p>
+        <div class="pilars-flex-grid">
+          
+          <div class="pilar-card fade-in">
+            <div class="pilar-header">
+              <span class="pilar-num">01</span>
+              <i class="fa-solid fa-comments pilar-icon"></i>
+            </div>
+            <h3 class="pilar-title">Atendimento próximo</h3>
+            <p class="pilar-text">Valorizamos a escuta e buscamos compreender o contexto de cada pessoa ou empresa.</p>
           </div>
 
-          <!-- Item 02 -->
-          <div class="diff-card fade-in">
-            <span class="diff-num">02</span>
-            <h3 class="diff-title">Comunicação clara</h3>
-            <p class="diff-text">Apresentamos informações jurídicas de forma objetiva e acessível, respeitando a complexidade de cada tema.</p>
+          <div class="pilar-card fade-in">
+            <div class="pilar-header">
+              <span class="pilar-num">02</span>
+              <i class="fa-solid fa-comment-dots pilar-icon"></i>
+            </div>
+            <h3 class="pilar-title">Comunicação clara</h3>
+            <p class="pilar-text">Apresentamos informações jurídicas de forma objetiva e acessível, respeitando a complexidade de cada tema.</p>
           </div>
 
-          <!-- Item 03 -->
-          <div class="diff-card fade-in">
-            <span class="diff-num">03</span>
-            <h3 class="diff-title">Análise individualizada</h3>
-            <p class="diff-text">Cada demanda é avaliada conforme suas particularidades, documentos e informações disponíveis.</p>
+          <div class="pilar-card fade-in">
+            <div class="pilar-header">
+              <span class="pilar-num">03</span>
+              <i class="fa-solid fa-magnifying-glass-chart pilar-icon"></i>
+            </div>
+            <h3 class="pilar-title">Análise individualizada</h3>
+            <p class="pilar-text">Cada demanda é avaliada conforme suas particularidades, documentos e informações disponíveis.</p>
           </div>
 
-          <!-- Item 04 -->
-          <div class="diff-card fade-in">
-            <span class="diff-num">04</span>
-            <h3 class="diff-title">Atuação responsável</h3>
-            <p class="diff-text">Nosso trabalho é conduzido com ética, transparência e compromisso profissional.</p>
+          <div class="pilar-card fade-in">
+            <div class="pilar-header">
+              <span class="pilar-num">04</span>
+              <i class="fa-solid fa-shield-halved pilar-icon"></i>
+            </div>
+            <h3 class="pilar-title">Atuação responsável</h3>
+            <p class="pilar-text">Nosso trabalho é conduzido com ética, transparência e compromisso profissional.</p>
           </div>
 
-          <!-- Item 05 -->
-          <div class="diff-card fade-in">
-            <span class="diff-num">05</span>
-            <h3 class="diff-title">Organização e acompanhamento</h3>
-            <p class="diff-text">Buscamos manter uma comunicação organizada sobre as etapas e informações relevantes do atendimento.</p>
+          <div class="pilar-card fade-in">
+            <div class="pilar-header">
+              <span class="pilar-num">05</span>
+              <i class="fa-solid fa-list-check pilar-icon"></i>
+            </div>
+            <h3 class="pilar-title">Organização e acompanhamento</h3>
+            <p class="pilar-text">Buscamos manter uma comunicação organizada sobre as etapas e informações relevantes do atendimento.</p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 7. COMO FUNCIONA O ATENDIMENTO -->
-    <section class="process-section section-padding bg-navy text-white">
+    <!-- 7. COMO FUNCIONA O ATENDIMENTO (TIMELINE VERTICAL ILUMINADA) -->
+    <section class="timeline-process-section section-padding bg-dark-editorial">
       <div class="container">
+        
         <div class="section-header text-center fade-in">
-          <div class="eyebrow center-eyebrow light-eyebrow">
+          <div class="eyebrow center-eyebrow">
             <span class="gold-line"></span>
             <span>PRIMEIRO CONTATO</span>
             <span class="gold-line"></span>
@@ -359,113 +434,133 @@
           <h2 class="section-title text-white">Um processo claro desde o início</h2>
         </div>
 
-        <div class="process-steps">
-          <div class="step-card fade-in">
-            <div class="step-number">01</div>
-            <h3 class="step-title">Entre em contato</h3>
-            <p class="step-text">Envie uma mensagem e informe brevemente o assunto que deseja tratar.</p>
+        <div class="timeline-steps-container">
+          
+          <div class="timeline-step-row fade-in">
+            <div class="timeline-step-badge">01</div>
+            <div class="timeline-step-content">
+              <h3 class="timeline-step-title">Entre em contato</h3>
+              <p class="timeline-step-desc">Envie uma mensagem e informe brevemente o assunto que deseja tratar.</p>
+            </div>
           </div>
 
-          <div class="step-card fade-in">
-            <div class="step-number">02</div>
-            <h3 class="step-title">Conversa inicial</h3>
-            <p class="step-text">Entendemos o contexto e identificamos as informações necessárias para uma análise inicial.</p>
+          <div class="timeline-step-row fade-in">
+            <div class="timeline-step-badge">02</div>
+            <div class="timeline-step-content">
+              <h3 class="timeline-step-title">Conversa inicial</h3>
+              <p class="timeline-step-desc">Entendemos o contexto e identificamos as informações necessárias para uma análise inicial.</p>
+            </div>
           </div>
 
-          <div class="step-card fade-in">
-            <div class="step-number">03</div>
-            <h3 class="step-title">Análise da situação</h3>
-            <p class="step-text">Os documentos e informações relevantes são avaliados conforme a necessidade do atendimento.</p>
+          <div class="timeline-step-row fade-in">
+            <div class="timeline-step-badge">03</div>
+            <div class="timeline-step-content">
+              <h3 class="timeline-step-title">Análise da situação</h3>
+              <p class="timeline-step-desc">Os documentos e informações relevantes são avaliados conforme a necessidade do atendimento.</p>
+            </div>
           </div>
 
-          <div class="step-card fade-in">
-            <div class="step-number">04</div>
-            <h3 class="step-title">Orientação e próximos passos</h3>
-            <p class="step-text">Apresentamos as possibilidades aplicáveis e esclarecemos os próximos passos.</p>
+          <div class="timeline-step-row fade-in">
+            <div class="timeline-step-badge">04</div>
+            <div class="timeline-step-content">
+              <h3 class="timeline-step-title">Orientação e próximos passos</h3>
+              <p class="timeline-step-desc">Apresentamos as possibilidades aplicáveis e esclarecemos os próximos passos.</p>
+            </div>
           </div>
+
         </div>
 
         <div class="process-cta text-center fade-in">
-          <a href="#agendamento-modal" class="btn btn-gold open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
+          <a href="#agendamento-modal" class="btn btn-gold-fill open-modal-btn" data-modal="modal-agendamento">
+            <span>Agendar uma conversa</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
           <p class="process-disclaimer">O contato inicial não representa garantia de contratação ou de resultado.</p>
         </div>
+
       </div>
     </section>
 
-    <!-- 8. PROFISSIONAIS / EQUIPE -->
-    <section class="team-section section-padding" id="equipe">
+    <!-- 8. PROFISSIONAIS (EQUIPE EDITORIAL SIDE-BY-SIDE) -->
+    <section class="team-editorial-section section-padding bg-cream" id="equipe">
       <div class="container">
+        
         <div class="section-header fade-in">
           <div class="eyebrow">
             <span class="gold-line"></span>
             <span>EQUIPE</span>
           </div>
-          <h2 class="section-title">Profissionais comprometidos com uma atuação responsável</h2>
+          <h2 class="section-title text-navy">Profissionais comprometidos com uma atuação responsável</h2>
         </div>
 
-        <div class="team-grid">
+        <div class="team-editorial-grid">
+          
           <!-- Profissional 1 -->
-          <article class="team-card fade-in">
-            <div class="team-photo-container">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Retrato profissional da Dra. Marina Almeida" class="team-photo" loading="lazy">
-              <span class="oab-badge">OAB/SP 000.000</span>
+          <article class="team-editorial-card fade-in">
+            <div class="team-portrait-wrapper">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Retrato profissional da Dra. Marina Almeida" class="team-portrait-img" loading="lazy">
+              <span class="team-oab-tag">OAB/SP 000.000</span>
             </div>
-            <div class="team-info">
-              <h3 class="team-name">Dra. Marina Almeida</h3>
-              <p class="team-role">Advogada</p>
-              <p class="team-bio">
+            <div class="team-details">
+              <h3 class="team-person-name">Dra. Marina Almeida</h3>
+              <p class="team-person-role">Advogada Sócia</p>
+              <p class="team-person-bio">
                 Atua com foco em Direito Civil, Direito de Família e planejamento patrimonial. Desenvolve seu trabalho com atenção à análise técnica e à comunicação clara.
               </p>
             </div>
           </article>
 
           <!-- Profissional 2 -->
-          <article class="team-card fade-in">
-            <div class="team-photo-container">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Retrato profissional do Dr. Rafael Vasconcelos" class="team-photo" loading="lazy">
-              <span class="oab-badge">OAB/SP 000.001</span>
+          <article class="team-editorial-card fade-in">
+            <div class="team-portrait-wrapper">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Retrato profissional do Dr. Rafael Vasconcelos" class="team-portrait-img" loading="lazy">
+              <span class="team-oab-tag">OAB/SP 000.001</span>
             </div>
-            <div class="team-info">
-              <h3 class="team-name">Dr. Rafael Vasconcelos</h3>
-              <p class="team-role">Advogado</p>
-              <p class="team-bio">
+            <div class="team-details">
+              <h3 class="team-person-name">Dr. Rafael Vasconcelos</h3>
+              <p class="team-person-role">Advogado Sócio</p>
+              <p class="team-person-bio">
                 Atua nas áreas de Direito Empresarial, Contratos e Direito Imobiliário, com foco em orientação jurídica e atendimento personalizado.
               </p>
             </div>
           </article>
+
         </div>
 
         <div class="team-footer text-center fade-in">
-          <a href="#sobre" class="btn btn-outline">Conhecer o escritório</a>
+          <a href="#sobre" class="btn btn-dark-outline">Conhecer o escritório</a>
         </div>
+
       </div>
     </section>
 
-    <!-- 9. CONTEÚDOS JURÍDICOS -->
-    <section class="articles-section section-padding bg-light" id="conteudos">
+    <!-- 9. CONTEÚDOS JURÍDICOS (GRID DE ARTIGOS EDITORIAIS) -->
+    <section class="articles-editorial-section section-padding bg-dark-editorial" id="conteudos">
       <div class="container">
+        
         <div class="section-header text-center fade-in">
           <div class="eyebrow center-eyebrow">
             <span class="gold-line"></span>
             <span>CONTEÚDOS</span>
             <span class="gold-line"></span>
           </div>
-          <h2 class="section-title">Informação jurídica de forma clara</h2>
+          <h2 class="section-title text-white">Informação jurídica de forma clara</h2>
           <p class="section-description">
             Conteúdos informativos para ajudar na compreensão de temas jurídicos do cotidiano.
           </p>
         </div>
 
-        <div class="articles-grid">
+        <div class="articles-editorial-grid">
+          
           <!-- Artigo 1 -->
-          <article class="article-card fade-in">
-            <div class="article-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80" alt="Análise cuidadosa de documentos e contratos jurídicos" class="article-img" loading="lazy">
-              <span class="article-tag">Direito Civil</span>
+          <article class="article-editorial-card fade-in">
+            <div class="article-thumb-wrapper">
+              <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80" alt="Análise cuidadosa de contratos jurídicos" class="article-thumb-img" loading="lazy">
+              <span class="article-category-badge">Direito Civil</span>
             </div>
-            <div class="article-content">
-              <h3 class="article-title">Contrato: por que revisar as cláusulas antes de assinar?</h3>
-              <p class="article-summary">
+            <div class="article-text-body">
+              <h3 class="article-heading">Contrato: por que revisar as cláusulas antes de assinar?</h3>
+              <p class="article-excerpt">
                 Entenda a importância de analisar obrigações, prazos e condições antes da formalização.
               </p>
               <button class="btn-text read-article-btn" data-article="article-1">
@@ -476,14 +571,14 @@
           </article>
 
           <!-- Artigo 2 -->
-          <article class="article-card fade-in">
-            <div class="article-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Planejamento e organização patrimonial em família" class="article-img" loading="lazy">
-              <span class="article-tag">Família e Sucessões</span>
+          <article class="article-editorial-card fade-in">
+            <div class="article-thumb-wrapper">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Organização patrimonial e planejamento sucessório" class="article-thumb-img" loading="lazy">
+              <span class="article-category-badge">Família e Sucessões</span>
             </div>
-            <div class="article-content">
-              <h3 class="article-title">Planejamento sucessório: quando considerar?</h3>
-              <p class="article-summary">
+            <div class="article-text-body">
+              <h3 class="article-heading">Planejamento sucessório: quando considerar?</h3>
+              <p class="article-excerpt">
                 Conheça alguns pontos que podem ser avaliados na organização patrimonial e sucessória.
               </p>
               <button class="btn-text read-article-btn" data-article="article-2">
@@ -494,14 +589,14 @@
           </article>
 
           <!-- Artigo 3 -->
-          <article class="article-card fade-in">
-            <div class="article-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80" alt="Reunião sobre relações de trabalho e ambiente corporativo" class="article-img" loading="lazy">
-              <span class="article-tag">Direito do Trabalho</span>
+          <article class="article-editorial-card fade-in">
+            <div class="article-thumb-wrapper">
+              <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80" alt="Relações de trabalho e conformidade jurídica" class="article-thumb-img" loading="lazy">
+              <span class="article-category-badge">Direito do Trabalho</span>
             </div>
-            <div class="article-content">
-              <h3 class="article-title">Direitos e deveres nas relações de trabalho</h3>
-              <p class="article-summary">
+            <div class="article-text-body">
+              <h3 class="article-heading">Direitos e deveres nas relações de trabalho</h3>
+              <p class="article-excerpt">
                 Uma visão geral sobre a importância de compreender responsabilidades e obrigações.
               </p>
               <button class="btn-text read-article-btn" data-article="article-3">
@@ -510,39 +605,45 @@
               </button>
             </div>
           </article>
+
         </div>
 
         <div class="articles-footer text-center fade-in">
           <p class="articles-disclaimer-note">Conteúdos meramente informativos. Não substituem orientação jurídica individualizada.</p>
         </div>
+
       </div>
     </section>
 
     <!-- 10. CTA PRINCIPAL -->
-    <section class="main-cta-section section-padding bg-navy text-white text-center">
-      <div class="container cta-container fade-in">
-        <div class="cta-gold-accent"><i class="fa-solid fa-star"></i></div>
-        <h2 class="cta-title text-white">Precisa de orientação jurídica?</h2>
-        <p class="cta-text">
+    <section class="cta-banner-section section-padding text-center">
+      <div class="container cta-banner-container fade-in">
+        <div class="cta-badge-star"><i class="fa-solid fa-star"></i></div>
+        <h2 class="cta-banner-title">Precisa de orientação jurídica?</h2>
+        <p class="cta-banner-text">
           Entre em contato para apresentar sua situação e conhecer as possibilidades de atendimento.
         </p>
-        <div class="cta-actions">
-          <a href="#agendamento-modal" class="btn btn-gold open-modal-btn" data-modal="modal-agendamento">Agendar uma conversa</a>
+        <div class="cta-banner-actions">
+          <a href="#agendamento-modal" class="btn btn-gold-fill open-modal-btn" data-modal="modal-agendamento">
+            <span>Agendar uma conversa</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-        <p class="cta-small-note">Cada situação é analisada de forma individual e responsável.</p>
+        <p class="cta-banner-note">Cada situação é analisada de forma individual e responsável.</p>
       </div>
     </section>
 
-    <!-- 11. FAQ ACCORDION -->
-    <section class="faq-section section-padding" id="faq">
-      <div class="container faq-container">
+    <!-- 11. FAQ ACCORDION EDITORIAL -->
+    <section class="faq-editorial-section section-padding bg-cream" id="faq">
+      <div class="container faq-editorial-container">
+        
         <div class="section-header text-center fade-in">
           <div class="eyebrow center-eyebrow">
             <span class="gold-line"></span>
             <span>DÚVIDAS FREQUENTES</span>
             <span class="gold-line"></span>
           </div>
-          <h2 class="section-title">Perguntas Frequentes</h2>
+          <h2 class="section-title text-navy">Perguntas Frequentes</h2>
           <p class="section-description">Esclareça suas dúvidas sobre a dinâmica de atendimento do escritório.</p>
         </div>
 
@@ -625,18 +726,20 @@
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
     <!-- 12. CONTATO & LOCALIZAÇÃO -->
-    <section class="contact-section section-padding bg-light" id="contato">
-      <div class="container contact-container">
+    <section class="contact-editorial-section section-padding bg-dark-editorial" id="contato">
+      <div class="container contact-editorial-container">
+        
         <div class="contact-info-block fade-in">
           <div class="eyebrow">
             <span class="gold-line"></span>
             <span>CONTATO</span>
           </div>
-          <h2 class="section-title">Fale com nossa equipe</h2>
+          <h2 class="section-title text-white">Fale com nossa equipe</h2>
           <p class="contact-lead">
             Entre em contato para apresentar brevemente sua necessidade e receber orientações sobre o atendimento.
           </p>
@@ -725,7 +828,7 @@
                 <span class="field-error" id="error-message"></span>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-full">Solicitar agendamento</button>
+              <button type="submit" class="btn btn-gold-fill btn-full">Solicitar agendamento</button>
               
               <p class="form-disclaimer-text">
                 Seus dados serão utilizados apenas para retorno do contato. O envio deste formulário não constitui compromisso contratual.
@@ -733,6 +836,7 @@
             </form>
           </div>
         </div>
+
       </div>
 
       <!-- Mapa Demonstrativo Estilizado -->
@@ -751,14 +855,14 @@
 
   </main>
 
-  <!-- 13. FOOTER -->
-  <footer class="site-footer bg-navy text-white">
+  <!-- 13. FOOTER EDITORIAL -->
+  <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-top">
         <div class="footer-brand">
           <a href="#inicio" class="footer-logo">
-            <span class="brand-name text-white">ALMEIDA & VASCONCELOS</span>
-            <span class="brand-sub gold-text">ADVOCACIA</span>
+            <span class="brand-name">ALMEIDA & VASCONCELOS</span>
+            <span class="brand-sub">ADVOCACIA</span>
           </a>
           <p class="footer-slogan">“Direito com clareza. Atendimento com proximidade.”</p>
         </div>
