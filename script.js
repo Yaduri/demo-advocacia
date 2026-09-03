@@ -21,45 +21,49 @@ function initPreloader() {
   const fill = document.getElementById('preloader-fill');
   const counter = document.getElementById('preloader-counter');
 
-  if (!preloader || !fill || !counter) return;
-
-  // Respeita preferência de movimento reduzido
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReducedMotion) {
-    preloader.classList.add('loaded');
-    document.body.style.overflow = '';
+  if (!preloader) {
+    triggerHeroAnimations();
     return;
   }
 
-  // Trava scroll enquanto carrega
+  // Trava scroll durante a abertura
   document.body.style.overflow = 'hidden';
 
   let progress = 0;
-  const duration = 1800; // 1.8 segundos de experiência de abertura fluida
+  const duration = 1500; // 1.5s de experiência de abertura de alto impacto no PC e Mobile
   const startTime = performance.now();
 
   function updateCounter(currentTime) {
     const elapsedTime = currentTime - startTime;
     progress = Math.min(Math.floor((elapsedTime / duration) * 100), 100);
 
-    fill.style.width = `${progress}%`;
-    counter.textContent = `${progress}%`;
+    if (fill) fill.style.width = `${progress}%`;
+    if (counter) counter.textContent = `${progress}%`;
 
     if (progress < 100) {
       requestAnimationFrame(updateCounter);
     } else {
-      // Pequeno delay ao atingir 100% para satisfação visual
       setTimeout(() => {
-        preloader.classList.add('loaded');
-        document.body.style.overflow = '';
-        
-        // Dispara animações de revelação da Hero
-        triggerHeroAnimations();
-      }, 250);
+        finishPreloader();
+      }, 200);
     }
   }
 
+  function finishPreloader() {
+    if (preloader.classList.contains('loaded')) return;
+    preloader.classList.add('loaded');
+    document.body.style.overflow = '';
+    
+    // Dispara animações de revelação da Hero
+    triggerHeroAnimations();
+  }
+
   requestAnimationFrame(updateCounter);
+
+  // Fallback de segurança absoluto (garante que no PC a Hero NUNCA fique invisível ou travada)
+  setTimeout(() => {
+    finishPreloader();
+  }, 2200);
 }
 
 function triggerHeroAnimations() {
@@ -67,7 +71,7 @@ function triggerHeroAnimations() {
   heroElements.forEach((el, index) => {
     setTimeout(() => {
       el.classList.add('visible');
-    }, index * 140);
+    }, index * 90);
   });
 }
 
@@ -385,14 +389,13 @@ function initScrollAnimations() {
 
   const observerOptions = {
     root: null,
-    rootMargin: '0px 0px -60px 0px',
-    threshold: 0.12
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.08
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      // Ignora elementos da Hero para não colidir com o acionamento do Preloader
-      if (entry.isIntersecting && !entry.target.closest('#inicio')) {
+      if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
@@ -400,8 +403,6 @@ function initScrollAnimations() {
   }, observerOptions);
 
   fadeElements.forEach(el => {
-    if (!el.closest('#inicio')) {
-      observer.observe(el);
-    }
+    observer.observe(el);
   });
 }
