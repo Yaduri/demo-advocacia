@@ -140,37 +140,24 @@ function initAccordion() {
   headers.forEach(header => {
     header.addEventListener('click', () => {
       const isExpanded = header.getAttribute('aria-expanded') === 'true';
-      const contentId = header.getAttribute('aria-controls');
-      const content = document.getElementById(contentId);
+      const item = header.closest('.accordion-item');
 
       // Fecha todos os outros itens
       headers.forEach(otherHeader => {
         if (otherHeader !== header) {
           otherHeader.setAttribute('aria-expanded', 'false');
-          const otherContentId = otherHeader.getAttribute('aria-controls');
-          const otherContent = document.getElementById(otherContentId);
-          if (otherContent) {
-            otherContent.style.maxHeight = null;
-            otherContent.style.paddingBottom = null;
-            otherContent.hidden = true;
-          }
+          const otherItem = otherHeader.closest('.accordion-item');
+          if (otherItem) otherItem.classList.remove('is-open');
         }
       });
 
       // Alterna o item atual
       if (isExpanded) {
         header.setAttribute('aria-expanded', 'false');
-        if (content) {
-          content.style.maxHeight = null;
-          content.style.paddingBottom = null;
-          content.hidden = true;
-        }
+        if (item) item.classList.remove('is-open');
       } else {
         header.setAttribute('aria-expanded', 'true');
-        if (content) {
-          content.hidden = false;
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
+        if (item) item.classList.add('is-open');
       }
     });
   });

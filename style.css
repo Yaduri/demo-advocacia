@@ -17,12 +17,15 @@
   --gold-primary: #C5A880;       /* Champagne Gold */
   --gold-light: #E4D2BA;         /* Light Champagne Accent */
   --gold-dark: #9A7B54;          /* Dark Metallic Border */
+  --gold-high-contrast: #745731; /* High Contrast Metallic Gold (WCAG AA > 5.2:1 on White/Cream) */
   --gold-glow: rgba(197, 168, 128, 0.22);
 
   --text-white: #FFFFFF;
   --text-slate-dark: #94A3B8;
   --text-navy-main: #0C1624;
   --text-muted-light: #64748B;
+  --text-cream-body: #334155;    /* High Contrast Body Text on Cream (WCAG AAA > 7:1) */
+  --text-cream-muted: #475569;   /* High Contrast Muted Text on Cream (WCAG AA > 5.5:1) */
 
   --whatsapp-green: #25D366;    /* Official WhatsApp Green */
 
@@ -41,7 +44,7 @@
 
   --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.06);
   --shadow-dark: 0 16px 44px rgba(0, 0, 0, 0.4);
-  --shadow-gold-glow: 0 12px 32px rgba(197, 168, 128, 0.25);
+  --shadow-gold-glow: 0 14px 34px rgba(197, 168, 128, 0.2), 0 2px 8px rgba(0, 0, 0, 0.3);
 
   --radius-sm: 6px;
   --radius-md: 14px;
@@ -216,12 +219,12 @@
 
 @keyframes pulseGoldCrest {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(197, 168, 128, 0.2);
+    box-shadow: 0 10px 25px rgba(197, 168, 128, 0.15);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 30px rgba(197, 168, 128, 0.5);
-    transform: scale(1.05);
+    box-shadow: 0 14px 34px rgba(197, 168, 128, 0.35);
+    transform: scale(1.04);
   }
 }
 
@@ -250,6 +253,40 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Browser Surfaces Craft */
+::selection {
+  background-color: rgba(197, 168, 128, 0.35);
+  color: #FFFFFF;
+}
+
+.bg-cream ::selection {
+  background-color: rgba(197, 168, 128, 0.45);
+  color: #0C1624;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(197, 168, 128, 0.35);
+  border-radius: 5px;
+  border: 2px solid var(--bg-obsidian);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 400;
@@ -267,7 +304,7 @@ p:last-child {
 a {
   color: inherit;
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast);
 }
 
 img {
@@ -382,6 +419,10 @@ button {
   margin: 0 auto;
 }
 
+.bg-cream .section-description {
+  color: var(--text-cream-muted);
+}
+
 /* --------------------------------------------------------------------------
    3. BUTTONS & INTERACTIVE ELEMENTS
    -------------------------------------------------------------------------- */
@@ -484,7 +525,7 @@ button {
   background-color: rgba(12, 22, 36, 0.94);
   backdrop-filter: blur(16px);
   border-bottom: var(--border-gold);
-  transition: all var(--transition-normal);
+  transition: box-shadow var(--transition-normal);
 }
 
 .site-header.scrolled {
@@ -533,15 +574,18 @@ button {
   padding: 6px 0;
 }
 
+/* Transform-based GPU-accelerated underline (no layout reflow) */
 .nav-link::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 2px;
   background-color: var(--gold-primary);
-  transition: width var(--transition-fast);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-fast);
 }
 
 .nav-link:hover, .nav-link.active {
@@ -549,7 +593,7 @@ button {
 }
 
 .nav-link:hover::after, .nav-link.active::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 .header-actions {
@@ -873,7 +917,7 @@ button {
 }
 
 .about-paragraphs p {
-  color: var(--text-muted-light);
+  color: var(--text-cream-body);
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 16px;
@@ -907,7 +951,7 @@ button {
   border-radius: var(--radius-md);
   border: var(--border-gold);
   box-shadow: var(--shadow-dark);
-  transition: all var(--transition-normal);
+  transition: transform var(--transition-normal), background-color var(--transition-normal), box-shadow var(--transition-normal);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -980,7 +1024,7 @@ button {
   font-weight: 600;
   color: var(--gold-primary);
   margin-top: auto;
-  transition: gap var(--transition-fast);
+  transition: gap var(--transition-fast), color var(--transition-fast);
 }
 
 .service-action-link:hover {
@@ -1003,13 +1047,27 @@ button {
 }
 
 .pilar-card {
+  position: relative;
   background-color: var(--bg-white);
-  padding: 36px 28px;
+  padding: 38px 28px 32px;
   border-radius: var(--radius-md);
   border: var(--border-light-subtle);
   box-shadow: var(--shadow-subtle);
-  border-top: 3px solid var(--gold-primary);
-  transition: all var(--transition-fast);
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Clean top accent bar without corner distortion */
+.pilar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--gold-primary);
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
 }
 
 .pilar-card:hover {
@@ -1044,7 +1102,7 @@ button {
 
 .pilar-text {
   font-size: 0.906rem;
-  color: var(--text-muted-light);
+  color: var(--text-cream-muted);
   line-height: 1.6;
 }
 
@@ -1075,7 +1133,7 @@ button {
   border-radius: var(--radius-md);
   border: var(--border-gold);
   box-shadow: var(--shadow-dark);
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
 }
 
 .timeline-step-row:hover {
@@ -1184,13 +1242,13 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--gold-dark);
+  color: var(--gold-high-contrast);
   margin-bottom: 16px;
 }
 
 .team-person-bio {
   font-size: 0.969rem;
-  color: var(--text-muted-light);
+  color: var(--text-cream-body);
   line-height: 1.65;
 }
 
@@ -1221,7 +1279,7 @@ button {
   border: var(--border-gold);
   overflow: hidden;
   box-shadow: var(--shadow-dark);
-  transition: all var(--transition-normal);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   display: flex;
   flex-direction: column;
 }
@@ -1333,7 +1391,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   14. FAQ ACCORDION EDITORIAL
+   14. FAQ ACCORDION EDITORIAL (GPU-ACCELERATED CSS GRID)
    -------------------------------------------------------------------------- */
 .faq-editorial-section {
   background-color: var(--bg-cream);
@@ -1356,7 +1414,7 @@ button {
   background-color: var(--bg-white);
   overflow: hidden;
   box-shadow: var(--shadow-subtle);
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .accordion-item:hover {
@@ -1375,6 +1433,7 @@ button {
   font-weight: 600;
   color: var(--text-navy-main);
   gap: 20px;
+  cursor: pointer;
 }
 
 .accordion-icon {
@@ -1387,17 +1446,32 @@ button {
   transform: rotate(45deg);
 }
 
+/* Modern GPU Grid transition (0 layout thrash / reflow) */
 .accordion-content {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.accordion-header[aria-expanded="true"] + .accordion-content,
+.accordion-item.is-open .accordion-content {
+  grid-template-rows: 1fr;
 }
 
 .accordion-inner {
-  padding: 0 32px 28px;
-  color: var(--text-muted-light);
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 32px 0;
+  color: var(--text-cream-body);
   font-size: 1rem;
   line-height: 1.7;
+  transition: padding-bottom 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-header[aria-expanded="true"] + .accordion-content .accordion-inner,
+.accordion-item.is-open .accordion-inner {
+  padding-bottom: 28px;
 }
 
 /* --------------------------------------------------------------------------
@@ -1638,6 +1712,7 @@ button {
 .footer-links a {
   font-size: 0.938rem;
   color: var(--text-slate-dark);
+  transition: color var(--transition-fast);
 }
 
 .footer-links a:hover {
@@ -1686,7 +1761,7 @@ button {
   justify-content: center;
   box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
   z-index: 999;
-  transition: all var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .whatsapp-float-btn:hover {
@@ -1769,6 +1844,7 @@ button {
   font-size: 1.75rem;
   color: var(--text-slate-dark);
   line-height: 1;
+  transition: color var(--transition-fast);
 }
 
 .modal-close-btn:hover {

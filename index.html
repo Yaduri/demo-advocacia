@@ -681,7 +681,7 @@
               <span>Como posso entrar em contato com o escritório?</span>
               <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content" id="faq-ans-1" aria-labelledby="faq-req-1" hidden>
+            <div class="accordion-content" id="faq-ans-1" aria-labelledby="faq-req-1">
               <div class="accordion-inner">
                 <p>Você pode entrar em contato pelo WhatsApp oficial do escritório, por e-mail ou preenchendo o formulário de contato no site. A equipe orientará sobre as informações necessárias para o atendimento inicial.</p>
               </div>
@@ -694,7 +694,7 @@
               <span>O atendimento pode ser realizado on-line?</span>
               <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content" id="faq-ans-2" aria-labelledby="faq-req-2" hidden>
+            <div class="accordion-content" id="faq-ans-2" aria-labelledby="faq-req-2">
               <div class="accordion-inner">
                 <p>Sim. Oferecemos atendimento presencial em nosso escritório em São Paulo e atendimento on-line via videochamada para clientes de outras regiões ou que prefiram maior praticidade.</p>
               </div>
@@ -707,7 +707,7 @@
               <span>Preciso enviar documentos no primeiro contato?</span>
               <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content" id="faq-ans-3" aria-labelledby="faq-req-3" hidden>
+            <div class="accordion-content" id="faq-ans-3" aria-labelledby="faq-req-3">
               <div class="accordion-inner">
                 <p>No primeiro contato, basta relatar brevemente o contexto da sua necessidade. Caso seja necessário analisar documentos específicos para a conversa inicial, nossa equipe informará com antecedência.</p>
               </div>
@@ -720,7 +720,7 @@
               <span>Como funciona a análise inicial?</span>
               <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content" id="faq-ans-4" aria-labelledby="faq-req-4" hidden>
+            <div class="accordion-content" id="faq-ans-4" aria-labelledby="faq-req-4">
               <div class="accordion-inner">
                 <p>Na análise inicial, ouvimos o seu relato, compreendemos o cenário e identificamos as possibilidades aplicáveis de acordo com a legislação vigente, orientando sobre os caminhos cabíveis.</p>
               </div>
@@ -733,7 +733,7 @@
               <span>O escritório atende pessoas físicas e empresas?</span>
               <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content" id="faq-ans-5" aria-labelledby="faq-req-5" hidden>
+            <div class="accordion-content" id="faq-ans-5" aria-labelledby="faq-req-5">
               <div class="accordion-inner">
                 <p>Sim. Atendemos demandas de pessoas físicas (como questões cíveis, familiares ou de planejamento patrimonial) e de pessoas jurídicas (contratos, suporte empresarial e relações trabalhistas).</p>
               </div>
@@ -746,7 +746,7 @@
               <span>O atendimento é realizado apenas na cidade?</span>
               <i class="fa-solid fa-plus accordion-icon" aria-hidden="true"></i>
             </button>
-            <div class="accordion-content" id="faq-ans-6" aria-labelledby="faq-req-6" hidden>
+            <div class="accordion-content" id="faq-ans-6" aria-labelledby="faq-req-6">
               <div class="accordion-inner">
                 <p>Embora nossa sede presencial esteja localizada na Avenida Paulista em São Paulo/SP, atendemos demandas em âmbito nacional através do atendimento digital e acompanhamento remoto.</p>
               </div>
@@ -819,19 +819,19 @@
             <form id="institutional-contact-form" novalidate>
               <div class="form-group">
                 <label for="form-name">Nome Completo *</label>
-                <input type="text" id="form-name" name="name" required placeholder="Digite seu nome">
+                <input type="text" id="form-name" name="name" required placeholder="Digite seu nome" aria-describedby="error-name">
                 <span class="field-error" id="error-name"></span>
               </div>
 
               <div class="form-group">
                 <label for="form-email">E-mail de Contato *</label>
-                <input type="email" id="form-email" name="email" required placeholder="seuemail@exemplo.com">
+                <input type="email" id="form-email" name="email" required placeholder="seuemail@exemplo.com" aria-describedby="error-email">
                 <span class="field-error" id="error-email"></span>
               </div>
 
               <div class="form-group">
                 <label for="form-phone">Telefone / WhatsApp *</label>
-                <input type="tel" id="form-phone" name="phone" required placeholder="(11) 99999-9999">
+                <input type="tel" id="form-phone" name="phone" required placeholder="(11) 99999-9999" aria-describedby="error-phone">
                 <span class="field-error" id="error-phone"></span>
               </div>
 
@@ -851,7 +851,7 @@
 
               <div class="form-group">
                 <label for="form-message">Resumo da Situação *</label>
-                <textarea id="form-message" name="message" rows="4" required placeholder="Descreva brevemente o assunto que deseja tratar"></textarea>
+                <textarea id="form-message" name="message" rows="4" required placeholder="Descreva brevemente o assunto que deseja tratar" aria-describedby="error-message"></textarea>
                 <span class="field-error" id="error-message"></span>
               </div>
 

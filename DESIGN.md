@@ -14,6 +14,9 @@ colors:
   text-slate-dark: "#94A3B8"
   text-navy-main: "#0C1624"
   text-muted-light: "#64748B"
+  text-cream-body: "#334155"
+  text-cream-muted: "#475569"
+  gold-high-contrast: "#745731"
   whatsapp-green: "#25D366"
 typography:
   display:
