@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-21T16:02:00Z",
+  "title": "Design System: Almeida & Vasconcelos Advocacia",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Champagne Gold",
+        "canonical": "#C5A880",
+        "tonalRamp": ["#E4D2BA", "#D8B98F", "#C5A880", "#B29267", "#9A7B54"]
+      },
+      "bg-obsidian": {
+        "role": "neutral",
+        "displayName": "Obsidian Navy",
+        "canonical": "#0C1624",
+        "tonalRamp": ["#1A2D4A", "#132238", "#0C1624", "#060B12"]
+      },
+      "bg-cream": {
+        "role": "neutral",
+        "displayName": "Alabaster Cream",
+        "canonical": "#F9F8F6",
+        "tonalRamp": ["#FFFFFF", "#FAF8F5", "#F9F8F6", "#EDEAE4"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "DM Serif Display",
+        "purpose": "Títulos de grande porte, abertura institucional e Hero Section."
+      },
+      "body": {
+        "displayName": "Manrope",
+        "purpose": "Texto corrido, leitura editorial, dados técnicos e interface."
+      }
+    },
+    "shadows": [
+      {
+        "name": "dark-void",
+        "value": "0 16px 44px rgba(0, 0, 0, 0.4)",
+        "purpose": "Profundidade de cartões escuros institucionais."
+      },
+      {
+        "name": "gold-glow",
+        "value": "0 12px 32px rgba(197, 168, 128, 0.25)",
+        "purpose": "Elevação luminosa em hover de elementos primários."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-curtain",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Transição de abertura das cortinas do preloader."
+      },
+      {
+        "name": "ease-hover",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Microinterações de botões e cartões."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "768px" },
+      { "name": "tablet", "value": "1024px" },
+      { "name": "desktop", "value": "1240px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão Primário Ouro",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Botão de conversão principal para agendamento de conversa.",
+      "html": "<button class=\"btn btn-gold-fill\"><span>Agendar uma conversa</span> <i class=\"fa-solid fa-arrow-right\"></i></button>",
+      "css": ".btn-gold-fill { background-color: #C5A880; color: #0C1624; border: 1px solid #C5A880; font-weight: 700; padding: 16px 34px; border-radius: 6px; box-shadow: 0 4px 18px rgba(197, 168, 128, 0.25); cursor: pointer; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .btn-gold-fill:hover { background-color: #E4D2BA; border-color: #E4D2BA; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(197, 168, 128, 0.25); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Chancelaria Contemporânea",
+    "overview": "O design system de Almeida & Vasconcelos materializa o equilíbrio entre tradição solene e acolhimento humano. Em vez de recorrer a layouts genéricos de duas colunas ou estéticas frias e intimidadoras de tribunais, a interface adota uma postura editorial de prestígio.",
+    "keyCharacteristics": [
+      "Contraste Rítmico de Seções em Obsidian Navy e Alabaster Cream",
+      "Hero Editorial Centralizado com Banner Panorâmico",
+      "Acentos Metálicos em Champagne Gold com iluminação contida",
+      "Abertura Cerimonial com Preloader Curtain Split Reveal"
+    ],
+    "rules": [
+      {
+        "name": "The Rarity of Gold Rule",
+        "body": "O Champagne Gold deve ocupar menos de 8% da área de qualquer tela.",
+        "section": "colors"
+      },
+      {
+        "name": "The Luminous Edge Rule",
+        "body": "A profundidade sobre fundos escuros é transmitida pela iluminação de bordas finas douradas.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Preservar a paleta Obsidian Navy e Champagne Gold em qualquer nova tela",
+      "Usar exclusivamente ícones do Font Awesome 6 com significado direto"
+    ],
+    "donts": [
+      "Usar clichês jurídicos desgastados como balanças gigantescas ou martelos",
+      "Prometer resultado ou causa ganha em respeito às diretrizes éticas da OAB"
+    ]
+  }
+}
