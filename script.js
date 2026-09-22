@@ -56,6 +56,11 @@ function initPreloader() {
     
     // Dispara animações de revelação da Hero
     triggerHeroAnimations();
+
+    // Desmonta totalmente o overlay após transição para evitar overflow no mobile
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 1400);
   }
 
   requestAnimationFrame(updateCounter);
